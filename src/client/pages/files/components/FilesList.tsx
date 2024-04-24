@@ -23,7 +23,7 @@ export const FilesList: FC<FilesListProps> = ({ files }) => {
     return (
         <section className="flex flex-wrap justify-center" role="list">
             {files.map((file) => (
-                <div className="w-1/3 p-2" key={file.name} role="listitem">
+                <div className="w-full p-2 sm:w-1/3" key={file.name} role="listitem">
                     <FileCard file={file} />
                 </div>
             ))}
