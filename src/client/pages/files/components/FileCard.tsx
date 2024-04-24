@@ -1,4 +1,4 @@
-import { useCallback, useMemo, type FC, type ReactElement } from 'react';
+import { useCallback, type FC, type ReactElement } from 'react';
 import {
     FaExternalLinkAlt,
     FaFile,
@@ -14,11 +14,7 @@ import { Button } from '../../../components/Button';
 import { Card } from '../../../components/Card';
 import { useFileUploadHook } from '../hooks/fileUploadHook';
 import { type FileItem } from '../types/file';
-import { formatFileSize, getFileExtension, isImageFile } from '../utils';
-
-interface FileProps {
-    file: FileItem;
-}
+import { formatFileSize, getFileExtension, isImageFile } from '../utils/file.utils';
 
 interface IconMap {
     [key: string]: ReactElement;
@@ -53,6 +49,10 @@ const getFileTypeIcon: FC<string> = (extension) => {
     return icon ?? <FaFile className="text-gray-500" size={100} aria-hidden="true" />;
 };
 
+interface FileProps {
+    file: FileItem;
+}
+
 /**
  * FileCard displays a card for each file with options to open or delete the file,
  * and shows an image thumbnail if the file is an image.
@@ -70,7 +70,8 @@ export const FileCard: FC<FileProps> = ({ file }) => {
         window.open(`/uploads/${file.name}`, '_blank');
     }, [file.name]);
 
-    const fileExtension = useMemo(() => getFileExtension(file.name), [file.name]);
+    const fileExtension = getFileExtension(file.name);
+    const fileIcon = getFileTypeIcon(fileExtension);
 
     return (
         <Card className="text-center">
@@ -79,7 +80,7 @@ export const FileCard: FC<FileProps> = ({ file }) => {
                     {isImageFile(file.name) ? (
                         <img src={`/uploads/${file.name}`} alt={`${file.name} thumbnail`} className="w-full h-auto" />
                     ) : (
-                        <div className="flex justify-center items-center h-full">{getFileTypeIcon(fileExtension)}</div>
+                        <div className="flex justify-center items-center h-full">{fileIcon}</div>
                     )}
                 </div>
 

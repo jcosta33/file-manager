@@ -5,7 +5,7 @@ import { FileUpload } from '../../components/FileUpload';
 
 import { FilesList } from './components/FilesList';
 import { useFileUploadHook } from './hooks/fileUploadHook';
-import { formatFileSize } from './utils';
+import { formatFileSize } from './utils/file.utils';
 
 /**
  * A management component for handling file uploads and displaying a list of files.

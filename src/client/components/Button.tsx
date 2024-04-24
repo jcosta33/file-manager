@@ -1,8 +1,7 @@
-// Button.tsx
 import { type FC, type MouseEvent, type ReactNode } from 'react';
 
 interface ButtonProps {
-    variant?: 'contained' | 'outlined' | 'text';
+    variant?: 'contained' | 'text';
     color?: 'primary' | 'secondary' | 'default' | 'danger' | 'success';
     size?: 'small' | 'medium' | 'large';
     disabled?: boolean;
@@ -28,17 +27,6 @@ const variantClasses = {
         default: 'bg-gray-400 hover:bg-gray-500 focus:border active:bg-gray-600 text-black shadow hover:shadow-md',
         danger: 'bg-red-600 hover:bg-red-700 focus:border active:bg-red-800 text-white shadow hover:shadow-md',
         success: 'bg-green-600 hover:bg-green-700 focus:border active:bg-green-800 text-white shadow hover:shadow-md',
-    },
-    outlined: {
-        primary:
-            'border border-blue-600 text-blue-600 hover:text-white hover:bg-blue-600 focus:ring-blue-300 active:bg-blue-700 shadow hover:shadow-md',
-        secondary:
-            'border border-green-600 text-green-600 hover:text-white hover:bg-green-600 focus:ring-green-300 active:bg-green-700 shadow hover:shadow-md',
-        default:
-            'border border-gray-400 text-gray-600 hover:text-black hover:bg-gray-400 focus:ring-gray-300 active:bg-gray-500 shadow hover:shadow-md',
-        danger: 'border border-red-600 text-red-600 hover:text-white hover:bg-red-600 focus:ring-red-300 active:bg-red-700 shadow hover:shadow-md',
-        success:
-            'border border-green-600 text-green-600 hover:text-white hover:bg-green-600 focus:ring-green-300 active:bg-green-700 shadow hover:shadow-md',
     },
     text: {
         primary: 'text-blue-600 hover:bg-blue-100 focus:bg-blue-200 active:bg-blue-300 shadow hover:shadow-md',

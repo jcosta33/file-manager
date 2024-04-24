@@ -7,7 +7,7 @@ import {
     hasValidFileExtension,
     hasValidFileSizeAndExtension,
     isValidFileSize,
-} from '../utils';
+} from '../fileInfo.utils.';
 
 describe('fileUtils', () => {
     describe('formatMaxFileSize', () => {

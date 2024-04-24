@@ -11,7 +11,12 @@ import {
 import { FaUpload } from 'react-icons/fa';
 
 import { type UploadProps } from './types';
-import { formatFileExtensions, formatMaxFileSize, getFilesErrorMessage, hasValidFileSizeAndExtension } from './utils';
+import {
+    formatFileExtensions,
+    formatMaxFileSize,
+    getFilesErrorMessage,
+    hasValidFileSizeAndExtension,
+} from './utils/fileInfo.utils.';
 
 interface UploadAreaProps extends UploadProps {
     children: ReactNode;
@@ -149,6 +154,7 @@ export const FileUpload: FC<UploadAreaProps> = ({
                         <br />
                         <strong>{formattedMaxFileSize}</strong>
                     </p>
+
                     <p className="mb-1">
                         <span>File types:</span>
                         <br />
