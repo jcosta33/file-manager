@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { formatFileSize, getFileExtension, isImageFile } from '../utils/file.utils';
+import { formatFileSize, getFileExtension, isImageFile } from '../file.utils';
 
 describe('File Utils', () => {
     describe('getFileExtension', () => {

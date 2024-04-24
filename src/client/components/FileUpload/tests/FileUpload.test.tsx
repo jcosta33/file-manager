@@ -22,17 +22,17 @@ describe('UploadArea', () => {
 
     it('handles drag and drop of files', () => {
         render(<FileUpload onFileChange={mockOnFileChange}>{<div>Upload Here</div>}</FileUpload>);
-        const uploadArea = screen.getByLabelText(/file upload area/i);
+        const dropArea = screen.getByTestId('file-upload-area');
         const dataTransfer = new DataTransfer();
 
         for (const file of mockFiles) {
             dataTransfer.items.add(file);
         }
 
-        fireEvent.dragOver(uploadArea);
-        expect(uploadArea).toHaveClass('border-zinc-400');
+        fireEvent.dragOver(dropArea);
+        expect(dropArea).toHaveClass('border-zinc-400');
 
-        fireEvent.drop(uploadArea, { dataTransfer });
+        fireEvent.drop(dropArea, { dataTransfer });
         expect(mockOnFileChange).toHaveBeenCalledWith(mockFiles);
     });
 
@@ -42,14 +42,14 @@ describe('UploadArea', () => {
                 {<div>Upload Here</div>}
             </FileUpload>
         );
-        const uploadArea = screen.getByLabelText(/file upload area/i);
+        const dropArea = screen.getByTestId('file-upload-area');
         const dataTransfer = new DataTransfer();
 
         for (const file of mockFiles) {
             dataTransfer.items.add(file);
         }
 
-        fireEvent.drop(uploadArea, { dataTransfer });
+        fireEvent.drop(dropArea, { dataTransfer });
         expect(mockOnFileChange).toHaveBeenCalledTimes(1);
     });
 

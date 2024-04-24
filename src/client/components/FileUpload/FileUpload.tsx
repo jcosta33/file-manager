@@ -125,6 +125,7 @@ export const FileUpload: FC<UploadAreaProps> = ({
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
+            data-testid="file-upload-area"
         >
             {children}
             <div className="text-center text-gray-500 p-5 mt-3">
