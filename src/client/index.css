@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  background-color: #111;
+@layer base {
+  body {
+    @apply bg-zinc-950; /* Example: using a Tailwind color */
+  }
 }

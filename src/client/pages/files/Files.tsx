@@ -41,7 +41,7 @@ export const Files: FC = () => {
             <Card>
                 <header className="flex flex-col justify-center items-center w-full mb-3">
                     <h1 className="text-xl text-white">Uploaded Files</h1>
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-zinc-500">
                         {files?.length || 0} files ({formatFileSize(totalFileSize)})
                     </span>
                 </header>

@@ -1,6 +1,6 @@
-# Task Boilerplate
+# File manager
 
-This is a simple boilerplate for the frontend task. You are free to use it and modify it to your needs.
+This is a simple file manager app. I have taken some inspiration from DDD when I created the frontend file structure, though not very strict. 
 
 ## Installation
 
@@ -42,11 +42,3 @@ POST /api/upload-chunks
 | `file`              | `file`   | **Required**. The file to upload             |
 | `currentChunkIndex` | `number` | **Required**. The current chunk index number |
 | `totalChunks`       | `number` | **Required**. The total number of chunks     |
-
-## Styling
-
-The boilerplate provides Tailwind CSS by default. If you want to use something else, feel free to add it.
-
-## Testing
-
-Vitest is provided by default for testing, however you are free to use whatever you like and are familiar with.

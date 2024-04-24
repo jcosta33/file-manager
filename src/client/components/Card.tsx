@@ -22,7 +22,7 @@ interface CardProps {
  */
 export const Card: React.FC<CardProps> = ({ title, children, actions, className }) => {
     return (
-        <article className={`bg-black border border-slate-900 rounded-lg shadow-lg overflow-hidden p-4 ${className}`}>
+        <article className={`bg-black border border-zinc-800 rounded-lg shadow-lg overflow-hidden p-4 ${className}`}>
             {title && <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>}
             {children}
             {actions && <div className="mt-4">{actions}</div>}

@@ -30,7 +30,7 @@ describe('UploadArea', () => {
         }
 
         fireEvent.dragOver(uploadArea);
-        expect(uploadArea).toHaveClass('border-slate-400');
+        expect(uploadArea).toHaveClass('border-zinc-400');
 
         fireEvent.drop(uploadArea, { dataTransfer });
         expect(mockOnFileChange).toHaveBeenCalledWith(mockFiles);

@@ -103,7 +103,7 @@ export const FileUpload: FC<UploadAreaProps> = ({
         We could use useMemo here but this seems to be one of those cases where it's not worth the verbosity that is added.
         It can often be unclear when to use useMemo and useCallback and I am happy to follow any conventions that are in place.
     */
-    const uploadAreaClasses = `relative border-2 border-dashed p-4 cursor-default rounded-lg outline-0 focus-visible:border-slate-400 ${isHovering ? 'border-slate-400' : 'border-black'}`;
+    const uploadAreaClasses = `relative border-2 border-dashed p-4 cursor-default rounded-lg outline-0 focus-visible:border-zinc-400 ${isHovering ? 'border-zinc-400' : 'border-black'}`;
     const formattedFileExtensions = formatFileExtensions(fileExtensions);
     const formattedMaxFileSize = formatMaxFileSize(maxFileSize);
 
@@ -124,7 +124,7 @@ export const FileUpload: FC<UploadAreaProps> = ({
             {children}
             <div className="text-center text-gray-500 p-5 mt-3">
                 <div
-                    className="max-w-96 p-2 mx-auto cursor-pointer text-slate-400 transition-colors hover:text-white"
+                    className="max-w-96 p-2 mx-auto cursor-pointer text-zinc-400 transition-colors hover:text-white"
                     onClick={handleClick}
                     onKeyDown={handleKeyDown}
                     tabIndex={0}

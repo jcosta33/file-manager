@@ -74,7 +74,7 @@ export const FileCard: FC<FileProps> = ({ file }) => {
 
     return (
         <Card className="text-center">
-            <div className="p-2 text-slate-300 hover:text-white transition-colors">
+            <div className="p-2 text-zinc-300 hover:text-white transition-colors">
                 <div className="h-32 rounded-lg overflow-hidden">
                     {isImageFile(file.name) ? (
                         <img src={`/uploads/${file.name}`} alt={`${file.name} thumbnail`} className="w-full h-auto" />
@@ -87,7 +87,7 @@ export const FileCard: FC<FileProps> = ({ file }) => {
                     {file.name}
                 </h4>
 
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-zinc-500">
                     {formatFileSize(file.size)} - {fileExtension}
                 </p>
             </div>
